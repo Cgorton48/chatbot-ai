@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "A sample ChatBot ai application",
   "engines": {
-      "node":"6.11.1"
-    },
+    "node": "6.11.1"
+  },
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
