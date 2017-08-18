@@ -4,7 +4,7 @@ const app = express();
 app.use(express.static(__dirname + '/views'));
 app.use(express.static(__dirname + '/public'));
 
-const server = app.listen(8000);
+const server = app.listen(5000);
 
 app.get('/', (req, res) => {
   res.sendFile('index.html');
@@ -16,7 +16,7 @@ io.on('connection', function(socket){
   console.log('a user connected');
 });
 
-const apiai = require('apiai')('d496325ffadd4e60aa13d26cccf2e91d');
+const apiai = require('apiai')(APIAI_TOKEN);
 
 io.on('connection', function(socket) {
   socket.on('chat message', (text) => {
@@ -24,7 +24,7 @@ io.on('connection', function(socket) {
     // Get a reply from API.AI
 
     let apiaiReq = apiai.textRequest(text, {
-      sessionId: '123'
+      sessionId: APIAI_SESSION_ID
     });
 
     apiaiReq.on('response', (response) => {
