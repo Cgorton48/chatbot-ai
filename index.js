@@ -16,7 +16,7 @@ io.on('connection', function(socket){
   console.log('a user connected');
 });
 
-const apiai = require('apiai')(APIAI_TOKEN);
+const apiai = require('apiai')('d496325ffadd4e60aa13d26cccf2e91d');
 
 io.on('connection', function(socket) {
   socket.on('chat message', (text) => {
@@ -24,7 +24,7 @@ io.on('connection', function(socket) {
     // Get a reply from API.AI
 
     let apiaiReq = apiai.textRequest(text, {
-      sessionId: APIAI_SESSION_ID
+      sessionId: '123'
     });
 
     apiaiReq.on('response', (response) => {
