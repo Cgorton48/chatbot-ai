@@ -1,12 +1,19 @@
 {
   "name": "speechbot",
   "version": "1.0.0",
-  "description": "",
+  "description": "A sample ChatBot ai application",
+  "engines": {
+      "node":"6.11.1"
+    },
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
   "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Cgorton48/chatbot-ai"
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
